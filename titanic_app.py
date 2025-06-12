@@ -197,15 +197,16 @@ elif menu == "🤖 예측 모델":
     pclass_filter = st.multiselect("객실 등급 (Pclass)", [1, 2, 3], default=[1, 2, 3])
     sex_filter = st.multiselect("성별", ['male', 'female'], default=['male', 'female'])
 
-    # 나이 범위 선택 (float + 0.5 단위)
-    min_age = float(result_df['Age'].min())
-    max_age = float(result_df['Age'].max())
+        # 나이 범위 선택 (정수만 허용: 1, 2, 3, ..., N)
+    min_age = int(result_df['Age'].min())
+    max_age = int(result_df['Age'].max())
+
     age_range = st.slider(
         "나이 범위 선택",
         min_value=min_age,
         max_value=max_age,
         value=(min_age, max_age),
-        step=0.5
+        step=1
     )
 
     filtered_df = result_df[

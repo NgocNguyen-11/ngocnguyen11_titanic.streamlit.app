@@ -180,9 +180,9 @@ elif menu == "📍 탑승항 분석":
     set_korean_font()
     fig = plt.figure(figsize=(8, 5))
     sns.countplot(data=train, x='Embarked', hue='Survived')
-    plt.xlabel('탑승항 (C = Cherbourg, Q = Queenstown, S = Southampton)')
-    plt.ylabel('탑승자 수')
-    plt.title('탑승항에 따른 생존/사망 분포')
+    plt.xlabel('Port of Embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)')
+    plt.ylabel('Number of Passengers')
+    plt.title('Survival Distribution by Embarkation Port')
     st.pyplot(fig)
 
 # -------------------------
@@ -198,7 +198,7 @@ elif menu == "📈 상관관계 히트맵":
     corr_matrix = corr_df[corr_cols].corr()
     fig = plt.figure(figsize=(10, 6))
     sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap="Blues")
-    plt.title("수치형 변수 간 상관관계")
+    plt.title("Correlation Between Numerical Features")
     st.pyplot(fig)
 
 # -------------------------

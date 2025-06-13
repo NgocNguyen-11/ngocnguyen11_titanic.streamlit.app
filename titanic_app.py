@@ -201,6 +201,7 @@ elif menu == "📈 상관관계 히트맵":
     plt.title("Correlation Between Numerical Features")
     st.pyplot(fig)
 
+
 # -------------------------
 # 🤖 예측 모델
 # -------------------------

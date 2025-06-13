@@ -34,8 +34,36 @@ def set_korean_font():
                 print("폰트 설치 오류:", e)
         plt.rcParams['font.family'] = 'NanumGothic'
     plt.rcParams['axes.unicode_minus'] = False
-    
+
 set_korean_font()
+
+#matplotlib에서 한글 폰트 설정
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+# NanumGothic 폰트 설정
+plt.rcParams['font.family'] = 'NanumGothic'
+
+# 음수 깨짐 방지
+plt.rcParams['axes.unicode_minus'] = False
+
+# 테스트
+plt.plot([1, 2, 3], [1, 4, 9])
+plt.title('한글 제목 테스트')
+plt.xlabel('X축')
+plt.ylabel('Y축')
+plt.show()
+
+# import os
+# from matplotlib import font_manager
+# import matplotlib.pyplot as plt
+
+# # Cấu hình đúng tên file bạn đang có
+# font_path = os.path.join("assets", "fonts", "NanumGothic-Regular.ttf")
+# font_prop = font_manager.FontProperties(fname=font_path)
+# plt.rcParams['font.family'] = font_prop.get_name()
+# plt.rcParams['axes.unicode_minus'] = False
 
 # 페이지 설정
 st.set_page_config(page_title="🚢 타이타닉 생존자 대시보드", layout="wide")

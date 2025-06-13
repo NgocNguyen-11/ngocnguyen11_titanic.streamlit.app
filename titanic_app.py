@@ -34,6 +34,8 @@ def set_korean_font():
                 print("폰트 설치 오류:", e)
         plt.rcParams['font.family'] = 'NanumGothic'
     plt.rcParams['axes.unicode_minus'] = False
+    
+set_korean_font()
 
 # 페이지 설정
 st.set_page_config(page_title="🚢 타이타닉 생존자 대시보드", layout="wide")

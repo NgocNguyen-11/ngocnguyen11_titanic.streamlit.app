@@ -55,19 +55,9 @@ plt.xlabel('X축')
 plt.ylabel('Y축')
 plt.show()
 
-# import os
-# from matplotlib import font_manager
-# import matplotlib.pyplot as plt
-
-# # Cấu hình đúng tên file bạn đang có
-# font_path = os.path.join("assets", "fonts", "NanumGothic-Regular.ttf")
-# font_prop = font_manager.FontProperties(fname=font_path)
-# plt.rcParams['font.family'] = font_prop.get_name()
-# plt.rcParams['axes.unicode_minus'] = False
-
 # 페이지 설정
-st.set_page_config(page_title="🚢 타이타닉 생존자 대시보드", layout="wide")
-st.title("🚢 타이타닉 생존자 대시보드")
+st.set_page_config(page_title="🚢 타이타닉 생존자 예측 대시보드", layout="wide")
+st.title("🚢 타이타닉 생존자 예측 대시보드")
 
 # 메뉴 구성
 # 🔍 탐색 메뉴 (사이드바)
